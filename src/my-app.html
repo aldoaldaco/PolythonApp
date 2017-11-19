@@ -34,7 +34,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <template>
         <style>
             :host {
-                --app-primary-color: #4285f4;
+                --app-primary-color: white;
                 --app-secondary-color: black;
 
                 display: block;
@@ -45,7 +45,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
 
             app-header {
-                color: #fff;
+                color: black;
                 background-color: var(--app-primary-color);
             }
 
@@ -83,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 tail="{{subroute}}">
         </app-route>
 
-        <app-drawer-layout fullbleed narrow="{{narrow}}" force-narrow>
+        <app-drawer-layout fullbleed narrow="{{narrow}}" force-narrow shadow>
             <!-- Drawer content -->
             <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]" force-narrow>
                 <app-toolbar>Menu</app-toolbar>
