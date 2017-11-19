@@ -1,0 +1,218 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+
+
+<link rel="import" href="../bower_components/app-layout/demo/sample-content.html">
+<link rel="import" href="../bower_components/credit-evaluator/credit-evaluator.html">
+
+<dom-module id="my-view5">
+  <template>
+    <style>
+      a {
+        text-decoration: none;
+        font-size: inherit;
+        color: inherit;
+      }
+
+      .toolbar {
+        @apply --layout-horizontal;
+        @apply --layout-end-justified;
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+
+      .tabs {
+        height: 100%;
+        @apply --layout-horizontal;
+      }
+
+      .tabs>a {
+        @apply --layout-vertical;
+        @apply --layout-center-center;
+        margin: 12px 16px 12px;
+        border-bottom: 1px solid #222;
+      }
+
+      header {
+        @apply --layout-vertical;
+        @apply --layout-center-center;
+        height: calc(100vh - 64px);
+        padding: 0 16px;
+        background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2426&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        text-align: center;
+      }
+
+      header>h2 {
+        font-size: 56px;
+        font-weight: 300;
+        margin: 0;
+      }
+
+      header>p {
+        font-size: 32px;
+      }
+
+      section {
+        padding: 88px 16px;
+      }
+
+      .container {
+        @apply --layout-horizontal;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .container>* {
+        @apply --layout-flex;
+      }
+
+      .container img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .container h3 {
+        font-size: 32px;
+        font-weight: 300;
+        margin: 24px 0;
+      }
+
+      .container p {
+        line-height: 1.5;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          @apply --layout-vertical;
+        }
+      }
+      .card {
+        display: flex;
+      }
+      .card-element {
+        width: 33%;
+        padding:20px;
+      }
+      .home {
+        display: flex;
+        width: 100%
+      }
+      .content-element {
+        padding:20px;
+        width: 50%
+      }
+      .hero {
+        float: right !important;
+        padding-right: 0px
+      }
+      .hero h2 {
+        font-size: 44px;
+        margin-bottom: 0px;
+      }
+      .hero p {
+        margin-top: 0px;
+        font-size: 28px;
+      }
+      credit-evaluator {
+      --credit-evaluator-width: 300px;
+      --credit-evaluator-height: 450px;
+      display: inline-block;
+      margin: 20px 120px;
+      margin-right: 250px;
+      --credit-evaluator-header-mixin: {
+        padding: 20px;
+      }
+      --credit-evaluator-main-mixin: {
+        padding: 20px;
+      }
+      --credit-evaluator-footer-mixin: {
+        padding: 0 20px;
+      }
+    }
+    </style>
+
+    <app-header-layout>
+
+      <header>
+        <div class="home">
+            <div class="content-element">
+                <credit-evaluator title-header="Evalua tu prestamo"></credit-evaluator>
+            </div>
+            <div class="content-element">
+                <div class="hero">
+                    <h2>Prestamos en Minutos</h2>
+                    <p>Te ayudamos a salir adelante</p>
+                </div>
+            </div>
+        </div>
+      </header>
+
+
+      <section class="card">
+        <div class="card-element">
+            <paper-card heading="Acerca" image="https://images.unsplash.com/photo-1493689485253-f07fcbfc731b?auto=format&fit=crop&w=2066&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Emmental">
+              <div class="card-content">
+                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one
+                of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+              </div>
+            </paper-card>
+        </div>
+        <div class="card-element ">
+            <paper-card heading="Servicios" image="https://images.unsplash.com/photo-1499083097717-a156f85f0516?auto=format&fit=crop&w=2102&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Emmental">
+              <div class="card-content">
+                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one
+                of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+              </div>
+            </paper-card>
+        </div>
+        <div class="card-element ">
+            <paper-card heading="Contacto" image="https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?auto=format&fit=crop&w=2100&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="Emmental">
+              <div class="card-content">
+                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area around Emmental, Switzerland. It is one
+                of the cheeses of Switzerland, and is sometimes known as Swiss cheese.
+              </div>
+            </paper-card>
+        </div>
+
+      </section>
+
+      <div class="content">
+          <template is="dom-repeat"><!-- No empty text node
+          --><a href="#sd" class="card-container">
+              <paper-card image="a">
+                <div class="card-content">
+                  <h2>ad</h2>
+                  <p>By <span>as</span></p>
+                </div>
+              </paper-card>
+            </a><!-- No empty text node
+        --></template>
+        </div>
+
+    </app-header-layout>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'my-view5'
+    });
+  </script>
+</dom-module>

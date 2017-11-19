@@ -1,0 +1,87 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/Credit-evaluator/Credit-evaluator.html">
+
+<dom-module id="my-view6">
+  <template>
+    <style>
+      section {
+        height: 600px;
+        background-image: url('https://static.pexels.com/photos/238622/pexels-photo-238622.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+      article {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        display: inline-block;
+        padding: 35px;
+        margin: 60px 0;
+        vertical-align: top;
+      }
+      h1 {
+        color: white;
+        font-family: arial;
+        font-size: 30px;
+      }
+      h2 {
+        color: white;
+        font-family: arial;
+        font-size:20px;
+      }
+      div {
+        display: inline-block;
+      }
+      credit-evaluator {
+        --iron-overlay-backdrop-opacity: 0;
+        --credit-evaluator-width: 300px;
+        --credit-evaluator-height: 450px;
+        display: inline-block;
+        margin: 20px 80px;
+        margin-left: 250px;
+        --credit-evaluator-header-mixin: {
+          padding: 20px;
+        }
+        --credit-evaluator-main-mixin: {
+          padding: 20px;
+        }
+        --credit-evaluator-footer-mixin: {
+          padding: 0 20px;
+        }
+      }
+      @media screen and (max-width:700px) {
+        credit-evaluator {
+          margin: 20px;
+        }
+        section {
+          height: 320px;
+        }
+      }
+    </style>
+    <section>
+      <article>
+        <h1>Ve nuestro hermoso cotizador,</h1>
+        <h2>prueba que prestamos es el adecuado para ti</h2>
+      </article>
+      <div>
+        <credit-evaluator title-header="Simula tu crédito"></credit-evaluator>
+      </div>
+    </section>
+  </template>
+  <script>
+    (function myView6(customElements) {
+      'use strict';
+
+      class MyView6 extends Polymer.Element {
+        static get is() { return 'my-view6';}
+        static get properties() {
+          return {
+
+          };
+        }
+      }
+      customElements.define(MyView6.is, MyView6);
+    })(window.customElements)
+  </script>
+</dom-module>
