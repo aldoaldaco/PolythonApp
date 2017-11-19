@@ -1,0 +1,55 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<link rel="import" href="../bower_components/Credit-evaluator/Credit-evaluator.html">
+<link rel="import" href="../bower_components/shadycss/apply-shim.html">
+
+<dom-module id="my-view1">
+    <template>
+        <style include="shared-styles">
+            :host {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .bancomer-evaluator {
+                --credit-evaluator-mixin: {
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                };
+                --credit-evaluator-width: 80%;
+                --credit-evaluator-header-mixin: {
+                    height: 60px;
+                    background-color: #0E3F8C;
+                    color: white;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                };
+                --credit-evaluator-button-bg-color: #0E3F8C;
+            }
+        </style>
+        <credit-evaluator title-header="BBVA Bancomer" class="bancomer-evaluator"></credit-evaluator>
+    </template>
+
+    <script>
+        class MyView1 extends Polymer.Element {
+            static get is() {
+                return 'my-view1';
+            }
+        }
+
+        window.customElements.define(MyView1.is, MyView1);
+    </script>
+</dom-module>
